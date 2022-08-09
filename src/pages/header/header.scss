@@ -1,0 +1,44 @@
+@import '../../style/variables.scss';
+
+.container {
+    display: flex;
+    justify-content: center;
+
+    header {
+        width: 80%;
+        position: fixed;
+    
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 1.8px solid $color-gray-opacity; 
+    
+            ul {
+                display: flex;
+                margin: 0 auto;
+                
+                li {
+                    list-style: none;
+                    font-size: 14px;
+                    margin: 0 15px;
+                    color: $color-gray;
+                    font-weight: 400px;    
+                }
+               
+                .menu-dropdown {
+                    word-spacing: 10px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+    
+                .currency {
+                    color: $color-gray-opacity-2;
+                    word-spacing: 10px;
+                }
+            }
+        }
+    }
+}
