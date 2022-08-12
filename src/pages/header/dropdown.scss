@@ -1,22 +1,100 @@
-.menu.active {
-    opacity: 1;
-    visibility: visible;
+@import '../../style/variables.scss';
 
-    background-color: red;
+.dropdown-menu {
+    display: none;
+}
+.dropdown-products-off {
+    display: none;
+}
+.sales-off {
+    display: none;
+}
+.dropdown-image-off {
+    display: none;
 }
 
-.menu {
-    height: 0;
-    width: 0;
-    opacity: 0;
+.menu-dropdown { 
+        .menu {
+            .dropdown-title {
+                font-size: 15px;
+                font-weight: 600;
+                margin-top: 10px; 
+                padding: 0 20px;
+                
+                img {
+                    margin-left: 10px;
+                }
+            }
+            
+            a {
+                color: $color-white;
+                text-decoration: none;
+                cursor: pointer;
+
+                li {
+                    list-style: none;
+                    line-height: 1.8;
+                    font-size: 15px;
+                    padding: 0 20px;
+                }
+            }   
+            
+            .dropdown-image {
+                padding: 10px 0;
+
+                img {
+                    width: 100%;
+                    border-radius: 5%;
+                }
+            }
+        }  
 }
 
-#menuDropdown {
-    background-color: red;
-    color: blue;
+// MEDIA QUERIES
+@media only screen and (min-width: 765px) {
+    .menu-dropdown {
+        .menu {
+            .dropdown-image {
+                img {
+                    width: 280px;       
+                }
+            }
+        }
+    }
 }
 
-.productCategories {background-color: red;
-    color: blue;
-    
+
+@media only screen and (min-width: 1024px) {
+    .menu-dropdown {
+        .menu {
+            background-color: red;
+            position: absolute;
+            margin-top: 100px;
+            justify-content: space-between;
+            top: 0;
+            width: 80%;
+            left: 10%;
+            display: flex;
+
+           
+            // a {
+                
+            //     li {
+            //         display: grid;
+            //         grid-template-columns: 1fr 1fr 1fr;
+                  
+            //     }
+            // }
+
+            ul {
+                background-color: green;
+                // display: grid;
+                // grid-template-columns: 1fr 1fr 1fr;
+
+                
+            }  
+        }
+    }
 }
+
+

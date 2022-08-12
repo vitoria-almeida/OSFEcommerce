@@ -1,44 +1,218 @@
 @import '../../style/variables.scss';
 
-.container {
-    display: flex;
-    justify-content: center;
+header {
+    background-color: $color-white;
+    width: 100%;
+    border-bottom: 2px solid $color-gray-opacity; 
 
-    header {
-        width: 80%;
-        position: fixed;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
     
-        nav {
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 10px;
+
+        a {
+            width: 100%;
+            picture {
+                width: 95%;
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 20%;
+                }
+            }
+        }
+
+        path {
+            width: 100px;
+        }
+     }
+   
+    nav {
+        display: none;
+        // width: 0vw;
+        // position: fixed;
+        // top: 1;
+        // right: 0;
+      
+         .nav-ul {
+            background-color: $color-blue;
+            padding: 2px 0;
+            line-height: 1.5;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-between; 
+                 
+            .nav-li {
+                color: $color-white;
+                padding: 5px;
+                margin: 5px;
+                display: grid;
+                grid-template-columns: 1fr 0fr; 
+                // display: flex;
+                // align-items: center;
+                // justify-content: space-between;  
+
+            }   
+         }
+    }
+
+    .responsive-toggle {
+        // width: 100%;
+        // visibility: visible;
+        // opacity: 1;   
+        display: block; 
+    }
+
+    .nav-icons {
+        width: 100%;
+        background-color: $color-blue;
+        position: fixed;
+        bottom: 0;
+        height: 50px;
+        border-top: 1px solid $color-white;
+
+        .nav-ul-icons {
             width: 100%;
             display: flex;
-            align-items: center;
-            justify-content: space-around;
-            border-bottom: 1.8px solid $color-gray-opacity; 
-    
-            ul {
-                display: flex;
-                margin: 0 auto;
-                
-                li {
-                    list-style: none;
-                    font-size: 14px;
-                    margin: 0 15px;
-                    color: $color-gray;
-                    font-weight: 400px;    
-                }
-               
-                .menu-dropdown {
-                    word-spacing: 10px;
-                    &:hover {
-                        cursor: pointer;
+            justify-content: space-around;         
+            li {
+                list-style: none;
+            }
+        }
+    } 
+}
+
+// MEDIA QUERIES
+@media only screen and (min-width: 768px) {
+    header {
+        div {
+            a {
+                picture {
+                    img {
+                        width: 10%;
                     }
-                }
-    
-                .currency {
-                    color: $color-gray-opacity-2;
-                    word-spacing: 10px;
                 }
             }
         }
     }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+       
+        header {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            div {
+                .toggle {
+                    display: none;
+                }
+
+                a {
+                    picture {
+                        img {
+                            width: 200%;
+                        }
+                    }
+                }
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+
+                .nav-ul {
+                    display: flex;
+                    flex-direction: row;
+                    background-color: $color-white;
+                    align-items: center;
+                    height: 100%;
+
+                    .nav-li {
+                        font-size: 14px;
+                        color: $color-blue;
+                        font-weight: 600;
+                        height: 100%;
+                        align-items: center;
+
+                        &:hover {
+                            background-color: $color-blue;
+                            color: $color-white;
+                            border-bottom: 4px solid $color-green;
+                            cursor: pointer;
+                        } 
+
+                        img {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    li:nth-child(2) {
+                        img {
+                            display: none;
+                        }
+                    }
+                    li:nth-child(3) {
+                        img {
+                            display: none;
+                        }
+                    }
+                    li:nth-child(4) {
+                        img {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .nav-icons {
+                position: initial;
+                width: 18%;
+                background-color: $color-white;
+
+                .nav-ul-icons {
+                    justify-content: space-between;
+                }
+            }
+        } 
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .container {
+        header {
+            justify-content: space-around;
+
+            nav {     
+                .nav-ul {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between; 
+                    gap: 20px;            
+                }
+            }
+
+            .nav-icons {
+                width: auto;            
+                .nav-ul-icons {
+                    gap: 20px;
+                }
+            }
+        }
+    }  
 }
