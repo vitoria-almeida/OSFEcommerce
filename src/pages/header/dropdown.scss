@@ -6,7 +6,7 @@
 .dropdown-products-off {
     display: none;
 }
-.sales-off {
+.dropdown-sales-off {
     display: none;
 }
 .dropdown-image-off {
@@ -15,29 +15,41 @@
 
 .menu-dropdown { 
         .menu {
-            .dropdown-title {
-                font-size: 15px;
-                font-weight: 600;
-                margin-top: 10px; 
-                padding: 0 20px;
-                
-                img {
-                    margin-left: 10px;
+            .dropdown-products,
+            .dropdown-sales {
+                display: flex;
+                flex-direction: column;
+
+                .dropdown-title {
+                    font-size: 15px;
+                    font-weight: 600;
+                    margin-top: 10px; 
+                    width: 100%;        
+                              
+                    img {
+                        margin-left: 10px;
+                    }
+                }
+
+                .dropdown-on {
+                    width: 100%;
+                    list-style-type: none;
+
+                    a {
+                        color: $color-white;
+                        text-decoration: none;
+                        cursor: pointer;
+                        width: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 1.8;
+                            font-size: 15px;
+                            
+                        }
+                    }   
                 }
             }
-            
-            a {
-                color: $color-white;
-                text-decoration: none;
-                cursor: pointer;
-
-                li {
-                    list-style: none;
-                    line-height: 1.8;
-                    font-size: 15px;
-                    padding: 0 20px;
-                }
-            }   
             
             .dropdown-image {
                 padding: 10px 0;
@@ -63,36 +75,42 @@
     }
 }
 
-
 @media only screen and (min-width: 1024px) {
     .menu-dropdown {
         .menu {
-            background-color: red;
+            background-color: $color-blue;
             position: absolute;
             margin-top: 100px;
             justify-content: space-between;
             top: 0;
             width: 80%;
             left: 10%;
-            display: flex;
+            display: flex; 
+            justify-content: center;
 
-           
-            // a {
-                
-            //     li {
-            //         display: grid;
-            //         grid-template-columns: 1fr 1fr 1fr;
-                  
-            //     }
+            .dropdown-sales,
+            .dropdown-products {
+                width: 33%;
+
+                .dropdown-on {
+                    border: 1px solid black;
+                    display: grid;
+                    grid-template-columns: 3, 1fr 1fr 1fr;
+                    
+
+                }
+            }
+
+            // :nth-child(2) {
+            //     text-align: right;
+            //     color: red;
             // }
 
-            ul {
-                background-color: green;
-                // display: grid;
-                // grid-template-columns: 1fr 1fr 1fr;
-
-                
-            }  
+            .dropdown-image {
+                width: 33%;
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }

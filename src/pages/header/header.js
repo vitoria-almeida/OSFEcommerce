@@ -46,25 +46,32 @@ function Header() {
                     <ul className='nav-ul'>
                         <li className='menu-dropdown nav-li'>SERVICES {arrow ? (<img src={downArrow} alt="Down Arrow" onClick={() => setArrow(false)}/>) : (<img src={upArrow} alt='Up Arrow' onClick={() => setArrow(true)}/>)}                
                             <ul className={`${arrow ? 'dropdown-menu' : 'menu'}`}>
-                                <h2 className='dropdown-title'>PRODUCT CATEGORIES {arrowProducts ? (<img src={downArrow} alt="Down Arrow" onClick={() => setArrowProducts(false)}/>) : (<img src={upArrow} alt='Up Arrow' onClick={() => setArrowProducts(true)}/>)}</h2>
-                                <li className={`${arrowProducts ? 'dropdown-products-off' : ''}`}>
-                                    <ul>
-                                        {productCategories.map((productsData, i) => (
-                                            <Link to='/error'><li key={i}>{productsData}</li></Link>
-                                        ))}
-                                    </ul>
-                                </li>
 
-                                <h2 className='dropdown-title'>SALES {arrowSales ? (<img src={downArrow} alt="Down Arrow" onClick={() => setArrowSales(false)}/>) : (<img src={upArrow} alt='Up Arrow' onClick={() => setArrowSales(true)}/>)}</h2>
-                                <li className={`${arrowSales ? 'sales-off' : 'sales-on'}`}>
-                                    <ul>
-                                        {sales.map((sales, i) => (
-                                            <Link to='/error'><li key={i}>{sales}</li></Link>
-                                        ))}    
-                                    </ul>
-                                </li>
+                                <div className='dropdown-products'>
+                                    <h2 className='dropdown-title'>PRODUCT CATEGORIES {arrowProducts ? (<img src={downArrow} alt="Down Arrow" onClick={() => setArrowProducts(false)}/>) : (<img src={upArrow} alt='Up Arrow' onClick={() => setArrowProducts(true)}/>)}</h2>
+                                    <li className={`${arrowProducts ? 'dropdown-products-off' : 'dropdown-on'}`}>
+                                        <ul>
+                                            {productCategories.map((productsData, i) => (
+                                                <Link to='/error'><li key={i}>{productsData}</li></Link>
+                                            ))}
+                                        </ul>
+                                    </li>
+                                </div>
+                                
+                                <div className='dropdown-sales'>
+                                    <h2 className='dropdown-title'>SALES {arrowSales ? (<img src={downArrow} alt="Down Arrow" onClick={() => setArrowSales(false)}/>) : (<img src={upArrow} alt='Up Arrow' onClick={() => setArrowSales(true)}/>)}</h2>
+                                    <li className={`${arrowSales ? 'dropdown-sales-off' : 'dropdown-on'}`}>
+                                        <ul>
+                                            {sales.map((sales, i) => (
+                                                <Link to='/error'><li key={i}>{sales}</li></Link>
+                                            ))}    
+                                        </ul>
+                                    </li>
+                                </div>
             
-                                <div className={`dropdown-image ${arrow ? 'dropdown-image-off' : ''}`}><img src={navGirl} alt='Nav Girl'/></div>
+                                <div className={`dropdown-image ${arrow ? 'dropdown-image-off' : ''}`}>
+                                    <img src={navGirl} alt='Nav Girl'/>
+                                </div>
                             </ul>
                         
                         </li>
