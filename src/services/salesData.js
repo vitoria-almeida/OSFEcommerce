@@ -5,6 +5,6 @@ export const sales = [
     "Books",
     "Drink",
     "Electronics",
-    "Flower & Plants",
+    "Flower&Plants",
     "Food"
 ]

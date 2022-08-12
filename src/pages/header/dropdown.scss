@@ -24,7 +24,8 @@
                     font-size: 15px;
                     font-weight: 600;
                     margin-top: 10px; 
-                    width: 100%;        
+                    width: 100%;      
+                    color: $color-white;  
                               
                     img {
                         margin-left: 10px;
@@ -86,33 +87,82 @@
             width: 80%;
             left: 10%;
             display: flex; 
-            justify-content: center;
 
-            .dropdown-sales,
             .dropdown-products {
-                width: 33%;
-
+                width: 50%;
+                
                 .dropdown-on {
-                    border: 1px solid black;
-                    display: grid;
-                    grid-template-columns: 3, 1fr 1fr 1fr;
-                    
-
+                    :first-child {                    
+                     column-count: 3  
+                    }   
                 }
             }
 
-            // :nth-child(2) {
-            //     text-align: right;
-            //     color: red;
-            // }
+            .dropdown-sales {
+                width: 17%;
+
+                .dropdown-on {
+                    :first-child {                    
+                        column-count: 1      
+                    }  
+                }
+           
+            }
 
             .dropdown-image {
                 width: 33%;
-                display: flex;
-                justify-content: center;
+
+                img {
+                    width: 250px;
+                }
             }
         }
     }
 }
 
+
+@media only screen and (min-width: 1280px) { 
+    .menu-dropdown { 
+        .menu {
+            padding: 20px;
+
+            .dropdown-products,
+            .dropdown-sales {
+                .dropdown-on {
+                    padding-top: 20px;
+                }
+            }
+
+            .dropdown-image {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 280px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .menu-dropdown {
+        .menu {
+            .dropdown-products {
+                width: 55%;
+            }
+        
+            .dropdown-sales {
+                width: 20%;
+            }
+        
+            .dropdown-image {      
+                .dropdown-image {
+                    width: 25%;
+                }
+            }
+        }
+    }
+    
+}
 
