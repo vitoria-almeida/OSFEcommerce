@@ -4,8 +4,8 @@ header {
     background-color: $color-white;
     width: 100%;
     border-bottom: 2px solid $color-gray-opacity; 
-    position: fixed;
     z-index: 2;
+    // position: fixed;
 
     div {
         display: flex;
@@ -39,6 +39,7 @@ header {
             background-color: $color-blue;
             padding: 2px 0;
             line-height: 1.5;
+            overflow: visible;
                  
             .nav-li {
                 color: $color-white;
@@ -47,7 +48,7 @@ header {
                 display: grid;
                 grid-template-columns: 1fr 0fr;   
             }   
-         }
+        }
     }
 
     .responsive-toggle { 
@@ -102,6 +103,7 @@ header {
             align-items: center;
             justify-content: space-between;
             height: 80px;
+            position: fixed;
 
             div {
                 .toggle {
@@ -130,7 +132,6 @@ header {
                     align-items: center;
                     height: 100%;
                    
-
                     .nav-li {
                         font-size: 14px;
                         color: $color-blue;

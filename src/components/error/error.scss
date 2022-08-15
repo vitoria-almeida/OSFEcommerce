@@ -16,7 +16,6 @@
         justify-content: space-between;
         width: 40%;   
         font-weight: 600;
-        margin-top: 60px;
         
         a {
             text-decoration: none;
@@ -106,7 +105,6 @@
     }
 }
 
-
 // MEDIA QUERIES
 @media only screen and (min-width: 768px) {
     .errorContainer {
@@ -138,6 +136,10 @@
     .errorContainer {
         width: 80%;
         margin: 0 auto;
+
+        ul {
+            margin-top: 50px;
+        }
 
         .errorContent {
             display: flex;
