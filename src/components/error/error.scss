@@ -1,0 +1,209 @@
+@import '../../style/variables.scss';
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $color-gray; 
+    background: $color-gray-background;
+    padding: 5%;
+    line-height: 1.8;
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 40%;   
+        font-weight: 600;
+        
+        a {
+            text-decoration: none;
+            color: $color-green;
+            cursor: pointer;
+        }
+    }
+
+    .errorBorder {
+        width: 100%;
+        border-bottom: 1px solid $color-gray-opacity;
+        position: relative;
+        top: 55px;
+        z-index: 0;
+    }
+
+    h1 {
+        font-size: 50px;
+        font-weight: 800;
+        width: 120px;
+        background-color: $color-gray-background;
+        z-index: 1;
+        text-align: center;
+    }
+
+    .errorContent {
+        background: $color-white;
+        padding: 5%;
+
+        h2 {
+            color: $color-green;
+            text-align: center;
+            font-size: 70px;
+            font-weight: 800;
+        }
+
+        div:nth-child(2) {
+            text-align: center;
+
+            h3 {
+                color: black; 
+                font-weight: 800;
+            }
+     
+            p {
+                font-weight: 600;
+                padding: 10px 0; 
+            }   
+     
+            a {
+                text-decoration: none;
+                color: $color-green;
+                cursor: pointer;      
+                font-size: 20px;
+
+                h5 {
+                    padding: 20px 0; 
+                }
+            }  
+             
+            .errorInput {
+                label {
+                    color: black; 
+                    font-weight: 800;
+                }
+
+                input {
+                    width: 90%;
+                    border-radius: 20px;
+                    border-color: $color-gray-opacity;
+                    padding: 10px; 
+                    outline-color: $color-green;          
+                }
+    
+                input::placeholder {
+                    font-weight: 600;
+                    color: $color-gray;
+                }
+    
+                img {
+                    position: relative;
+                    right: 35px;
+                    top: 5px;
+                }          
+            }
+        }
+    }
+}
+
+
+// MEDIA QUERIES
+@media only screen and (min-width: 768px) {
+    .errorContainer {
+        ul {
+            width: 100px;
+        }
+
+        .errorContent {
+            div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                a {
+                    width: auto; 
+                }
+
+                .errorInput {
+                    input {
+                        width: 500px;
+                    }
+                }
+            }
+        }
+    }  
+}
+
+@media only screen and (min-width: 1024px) {
+    .errorContainer {
+        width: 80%;
+        margin: 0 auto;
+
+        .errorContent {
+            display: flex;
+            align-items: center;
+
+            div:nth-child(1) {
+                width: 50%;
+            }
+
+            div:nth-child(2) {
+                text-align: left;
+                width: 50%;
+
+                h3, a {
+                    width: 100%;
+                }
+
+                .errorInput {
+                    width: 100%;
+
+                    input {   
+                        width: 90%;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .errorContainer {
+        h1 {
+           margin-bottom: 20px;
+        }
+        .errorContent {
+            div:nth-child(1) {
+                width: 40%;
+                
+                h2 {
+                    font-size: 100px;
+                }
+            }
+
+            div:nth-child(2) {
+                h3, label {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+
+                a {
+                    font-size: 25px;
+                }
+                
+                .errorInput {
+                    input {
+                        padding: 15px;
+                    }
+    
+                    input::placeholder {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

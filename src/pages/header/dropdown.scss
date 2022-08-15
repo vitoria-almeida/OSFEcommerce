@@ -83,38 +83,39 @@
             position: absolute;
             margin-top: 100px;
             justify-content: space-between;
-            top: 0;
+            top: -30px;
             width: 80%;
             left: 10%;
             display: flex; 
+            z-index: 2;      
 
             .dropdown-products {
-                width: 50%;
+                width: 50%; 
+            }
                 
-                .dropdown-on {
-                    :first-child {                    
-                     column-count: 3  
-                    }   
-                }
+            .dropdown-on {
+                :first-child {                    
+                    column-count: 3  
+                }   
             }
+        }
 
-            .dropdown-sales {
-                width: 17%;
+        .dropdown-sales {
+            width: 17%;
 
-                .dropdown-on {
-                    :first-child {                    
-                        column-count: 1      
-                    }  
-                }
-           
+            .dropdown-on {
+                :first-child {                    
+                    column-count: 1      
+                }  
             }
+        
+        }
 
-            .dropdown-image {
-                width: 33%;
+        .dropdown-image {
+            width: 33%;
 
-                img {
-                    width: 250px;
-                }
+            img {
+                width: 250px;
             }
         }
     }

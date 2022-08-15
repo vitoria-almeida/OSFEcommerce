@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { productCategories } from '../../services/productsData.js'
@@ -24,9 +24,9 @@ function Header() {
 
     const [arrow, setArrow] = useState(true)
 
-    const [arrowProducts, setArrowProducts] = useState(true)
+    const [arrowProducts, setArrowProducts] = useState(false)
 
-    const [arrowSales, setArrowSales] = useState(true)
+    const [arrowSales, setArrowSales] = useState(false)
 
     return (
         <div className='container'>
@@ -46,7 +46,7 @@ function Header() {
                     <ul className='nav-ul'>
                         <li className='menu-dropdown nav-li'>SERVICES {arrow ? (<img src={downArrow} alt="Down Arrow" onClick={() => setArrow(false)}/>) : (<img src={upArrow} alt='Up Arrow' onClick={() => setArrow(true)}/>)}                
                             <ul className={`${arrow ? 'dropdown-menu' : 'menu'}`}>
-
+ 
                                 <div className='dropdown-products'>
                                     <h2 className='dropdown-title'>PRODUCT CATEGORIES {arrowProducts ? (<img src={downArrow} alt="Down Arrow" onClick={() => setArrowProducts(false)}/>) : (<img src={upArrow} alt='Up Arrow' onClick={() => setArrowProducts(true)}/>)}</h2>
                                     <li className={`${arrowProducts ? 'dropdown-products-off' : 'dropdown-on'}`}>

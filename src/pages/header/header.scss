@@ -59,6 +59,7 @@ header {
         bottom: 0;
         height: 50px;
         border-top: 1px solid $color-white;
+        z-index: 2;
 
         .nav-ul-icons {
             width: 100%;
