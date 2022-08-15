@@ -4,6 +4,8 @@ header {
     background-color: $color-white;
     width: 100%;
     border-bottom: 2px solid $color-gray-opacity; 
+    position: fixed;
+    z-index: 2;
 
     div {
         display: flex;
@@ -93,13 +95,13 @@ header {
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-top: 10px;
        
         header {
             width: 80%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 80px;
 
             div {
                 .toggle {
@@ -127,6 +129,7 @@ header {
                     background-color: $color-white;
                     align-items: center;
                     height: 100%;
+                   
 
                     .nav-li {
                         font-size: 14px;

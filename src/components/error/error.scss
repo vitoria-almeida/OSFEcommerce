@@ -16,6 +16,7 @@
         justify-content: space-between;
         width: 40%;   
         font-weight: 600;
+        margin-top: 60px;
         
         a {
             text-decoration: none;
@@ -28,7 +29,7 @@
         width: 100%;
         border-bottom: 1px solid $color-gray-opacity;
         position: relative;
-        top: 55px;
+        top: 50px;
         z-index: 0;
     }
 
