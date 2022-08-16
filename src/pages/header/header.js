@@ -23,9 +23,7 @@ function Header() {
     const [navState, setNavState] = useState(false)
 
     const [arrow, setArrow] = useState(true)
-
     const [arrowProducts, setArrowProducts] = useState(false)
-
     const [arrowSales, setArrowSales] = useState(false)
 
     return (

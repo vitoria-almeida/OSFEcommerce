@@ -2,8 +2,7 @@ import './button.scss'
 
 function Button() {
     return (
-        <>
-        </>
+        <div></div>
     )
 }
 
