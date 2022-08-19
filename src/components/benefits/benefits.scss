@@ -1,0 +1,68 @@
+@import '../../style/variables.scss';
+
+.benefits {
+    background-color: $color-gray;
+
+    .benefitsContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 25px 15px;
+
+       .benefitsImage {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+       }
+
+        .benefitsText {
+            width: 50%;
+
+            h1 {
+                font-size: 20px;
+                color: $color-white;
+                margin-bottom: 15px;
+            }
+
+            p {
+                color: $color-white;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .benefitsContent:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+}
+
+// MEDIA QUERIES
+@media only screen and (min-width: 1280px) {
+    .benefits {  
+        display: flex;    
+        padding: 50px 0;
+        
+        .benefitsContent {
+            display: flex;
+            justify-content: space-between;
+
+            .benefitsImage {
+               width: 30%;
+            }
+
+            .benefitsText {
+                width: 70%;
+                
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+        
+        .benefitsContent:nth-child(2) {
+            flex-direction: row;
+        }
+    }
+}
+

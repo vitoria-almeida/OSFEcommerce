@@ -2,6 +2,7 @@ import './home.scss'
 
 import CarouselBanner from '../../components/carouselBanner/carouselBanner'
 import AsideContent from '../../components/asideContent/asideContent'
+import Benefits from '../../components/benefits/benefits'
 
 function Home() {
     return (
@@ -14,6 +15,10 @@ function Home() {
                 <div className='asideContent'>
                     <AsideContent/>
                 </div>
+            </div>
+
+            <div>
+                <Benefits/>
             </div>
         </div>
 
