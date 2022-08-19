@@ -3,6 +3,7 @@ import './home.scss'
 import CarouselBanner from '../../components/carouselBanner/carouselBanner'
 import AsideContent from '../../components/asideContent/asideContent'
 import Benefits from '../../components/benefits/benefits'
+import Banner from '../../components/banner/banner'
 
 function Home() {
     return (
@@ -18,8 +19,14 @@ function Home() {
             </div>
 
             <div>
+                <Banner/>
+            </div>
+            
+            <div>
                 <Benefits/>
             </div>
+
+            
         </div>
 
         
