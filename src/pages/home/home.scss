@@ -1,6 +1,17 @@
 .home {
    z-index: 1;
-   background-color: blue;
-   // margin-top: 20%;
+}
+
+// MEDIA QUERIES
+@media only screen and (min-width: 1024px) {
+   .home {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 100px;
+
+      .slideHome {
+         height: 500px;
+      }
+   }
 }
 

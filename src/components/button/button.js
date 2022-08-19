@@ -1,8 +1,10 @@
-import './button.scss'
+import styles from './button.module.css'
 
-function Button() {
+function Button({style, text}) {
     return (
-        <div></div>
+        <button className={styles.button} style={{ ...style }}>
+            {text}
+        </button>
     )
 }
 

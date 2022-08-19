@@ -51,6 +51,7 @@ function Footer() {
                     <li>Testimonials</li>
                     <li>Contact</li>
                 </ul>
+                
             </div>
 
             <div>

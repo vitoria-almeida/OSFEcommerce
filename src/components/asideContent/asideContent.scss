@@ -1,0 +1,60 @@
+@import '../../style/variables.scss';
+
+.asideContent {
+    display: none;
+}
+
+// MEDIA QUERIES
+@media only screen and (min-width: 1024px) {
+    .asideContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: space-between;
+        background-color: $color-white;
+        height: 100%;
+
+        img {
+            width: 80%;
+        } 
+        
+        h4 {
+            color: $color-gray;
+        }
+
+        p {
+           max-width: 200px;
+           color: $color-gray;
+        }
+
+        button {
+            width: 150px;
+            border-radius: 20px;
+            border: 3px solid $color-light-blue;
+            color: $color-light-blue;
+            padding: 8px; 
+            background-color: transparent; 
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }       
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .asideContent {
+        img {
+            width: 100%;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 15px;
+        }
+    }
+}
