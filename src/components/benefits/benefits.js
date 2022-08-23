@@ -6,7 +6,7 @@ import knowledge from '../../assets/service-knowledge.png'
 
 function Benefits() {
     return (
-        <div className='benefits'>
+        <div className='benefitsContainer'>
             <div className='benefitsContent'>
                 <div className='benefitsImage'>
                     <img src={focus} alt='Focus Icon'/>

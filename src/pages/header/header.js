@@ -27,7 +27,7 @@ function Header() {
     const [arrowSales, setArrowSales] = useState(false)
 
     return (
-        <div className='container'>
+        <div className='headerContainer'>
             <header>
                 <div>
                     <div className='toggle'>{navState ? (<FaTimes size={22} onClick={() => setNavState(false)}/> ) : (<FaBars size={22} onClick={() => setNavState(true)}/>)}</div>            
@@ -50,7 +50,7 @@ function Header() {
                                     <li className={`${arrowProducts ? 'dropdown-products-off' : 'dropdown-on'}`}>
                                         <ul>
                                             {productCategories.map((productsData, i) => (
-                                                <Link to='/error'><li key={i}>{productsData}</li></Link>
+                                                <Link to='/error' key={i}><li>{productsData}</li></Link>
                                             ))}
                                         </ul>
                                     </li>
@@ -61,7 +61,7 @@ function Header() {
                                     <li className={`${arrowSales ? 'dropdown-sales-off' : 'dropdown-on'}`}>
                                         <ul>
                                             {sales.map((sales, i) => (
-                                                <Link to='/error'><li key={i}>{sales}</li></Link>
+                                                <Link to='/error' key={i}><li>{sales}</li></Link>
                                             ))}    
                                         </ul>
                                     </li>

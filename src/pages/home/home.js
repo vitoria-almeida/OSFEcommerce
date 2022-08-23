@@ -4,6 +4,8 @@ import CarouselBanner from '../../components/carouselBanner/carouselBanner'
 import AsideContent from '../../components/asideContent/asideContent'
 import Benefits from '../../components/benefits/benefits'
 import Banner from '../../components/banner/banner'
+import PopularItens from '../../components/popular/popular'
+import FeaturedProducts from '../../components/featured/featured'
 
 function Home() {
     return (
@@ -26,6 +28,9 @@ function Home() {
                 <Benefits/>
             </div>
 
+            <div>
+                <FeaturedProducts/>
+            </div>
             
         </div>
 

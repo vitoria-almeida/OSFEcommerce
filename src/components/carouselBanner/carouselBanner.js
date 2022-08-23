@@ -25,10 +25,10 @@ function CarouselBanner() {
     }
 
     return (
-        <div className='containerSlider'>
+        <div className='carouselContainer'>
             {slides.map((obj, index) => {
                 return (
-                    <div className={slideIndex === index + 1 ? 'slide activeAnimate' : 'slide'}>
+                    <div key={index} className={slideIndex === index + 1 ? 'slide activeAnimate' : 'slide'}>
                         <img src={obj.url} alt={obj.title}/>
                     </div>
                 )
@@ -47,7 +47,7 @@ function CarouselBanner() {
 
             <div className='containerDots'>
                 {Array.from({length: 5}).map((item, index) => (
-                   <div onClick={() => moveDot(index + 1)} className={slideIndex === index + 1 ? 'dotActive' : 'dot'}>
+                   <div onClick={() => moveDot(index + 1)} key={index} className={slideIndex === index + 1 ? 'dotActive' : 'dot'}>
                     </div>
                 ))}
             </div>

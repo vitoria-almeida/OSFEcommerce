@@ -1,6 +1,6 @@
 @import '../../style/variables.scss';
 
-.containerSlider { 
+.carouselContainer { 
     height: 500px;
     position: relative;
     overflow: hidden;
@@ -75,7 +75,7 @@
 
 // MEDIA QUERIES
 @media only screen and (min-width: 880px) and (max-width: 1023px) {
-    .containerSlider { 
+    .carouselContainer { 
         width: 100%;
         
         .slide {
@@ -89,7 +89,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    .containerSlider { 
+    .carouselContainer { 
         width: 70%;
         float: left;
 
@@ -112,7 +112,7 @@
 }
 
 @media only screen and (min-width: 1280px) {
-    .containerSlider { 
+    .carouselContainer { 
         width: 70%;
         
         .slide {

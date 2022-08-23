@@ -1,6 +1,6 @@
 @import '../../style/variables.scss';
 
-.benefits {
+.benefitsContainer {
     background-color: $color-gray;
 
     .benefitsContent {
@@ -39,7 +39,7 @@
 
 // MEDIA QUERIES
 @media only screen and (min-width: 1280px) {
-    .benefits {  
+    .benefitsContainer {  
         display: flex;    
         padding: 50px 0;
         
@@ -65,4 +65,3 @@
         }
     }
 }
-

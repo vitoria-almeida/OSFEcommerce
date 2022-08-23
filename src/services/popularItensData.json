@@ -1,0 +1,86 @@
+[
+    {
+    "id": 1,
+    "name": "Kristins Dam Oak Table With White Marble Top",
+    "price": 799.55,
+    "category": "Awesome",
+    "path": "../../assets/item1.png"
+    },
+    {
+        "id": 2,
+        "name": "Hay - About A Lounge Chair AAL 93",
+        "price": 659.55,
+        "category": "Marketing",
+        "path": "assets/item1.png"
+    },
+    {
+        "id": 3,
+        "name": "Activate Facial Mask and Charcoal Soap",
+        "price": 129.55,
+        "category": "Awesome",
+        "path": "./static/media/item3.885cf5d23c7b45e6a9a3.png"
+    },
+    {
+        "id": 4,
+        "name": "Cocktail Table Walnut | YES",
+        "price": 299.99,
+        "category": "Marketing",
+        "path": "./static/media/item4.e71e9a40cd8c44e5b3a8.png"
+    },
+    {
+        "id": 5,
+        "name": "Hay - About A Lounge Chair AAL 93",
+        "price": 659.55,
+        "category": "Awesome",
+        "path": "./static/media/item5.808aac7bfbf450ff2173.png"
+    },
+    {
+        "id": 6,
+        "name": "TOY DESK CALENDAR",
+        "price": 410.99,
+        "category": "Marketing",
+        "path": "/static/media/item6.53522d8b1ea3c2730c9f.png"
+    },
+    {
+        "id": 7,
+        "name": "CH445 Wing Chair on SUITE NY",
+        "price": 330.55,
+        "category": "Awesome",
+        "path": "/static/media/item7.5fc17b4520e95f923b45.png"
+    },
+    {
+        "id": 8,
+        "name": "Activate Facial Mask and Charcoal Soap",
+        "price": 129.55,
+        "category": "Awesome",
+        "path": "/static/media/item3.885cf5d23c7b45e6a9a3.png"
+    },
+    {
+        "id": 9,
+        "name": "Kristins Dam Oak Table With White Marble Top",
+        "price": 799.55,
+        "category": "Awesome",
+        "path": "/static/media/item1.94abac0f1e1d7b648f67.png"
+    },
+    {
+        "id": 10,
+        "name": "Kristins Dam Oak Table With White Marble Top",
+        "price": 659.55,
+        "category": "Marketing",
+        "path": "/static/media/item2.d5a360521d0987c78909.png"
+    },
+    {
+        "id": 11,
+        "name": "Kristins Dam Oak Table With White Marble Top",
+        "price": 129.55,
+        "category": "Awesome",
+        "path": "/static/media/item3.885cf5d23c7b45e6a9a3.png"
+    },
+    {
+        "id": 12,
+        "name": "Hezy Theme",
+        "price": 299.99,
+        "category": "Marketing",
+        "path": "/static/media/item4.e71e9a40cd8c44e5b3a8.png"
+    }
+]
