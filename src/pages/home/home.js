@@ -18,23 +18,12 @@ function Home() {
                 <div className='asideContent'>
                     <AsideContent/>
                 </div>
-            </div>
-
-            <div>
-                <Banner/>
-            </div>
-            
-            <div>
-                <Benefits/>
-            </div>
-
-            <div>
-                <FeaturedProducts/>
-            </div>
-            
-        </div>
-
-        
+            </div>       
+            <PopularItens/>       
+            <Banner/>                    
+            <Benefits/>        
+            <FeaturedProducts/>          
+        </div>       
     )
 }
 

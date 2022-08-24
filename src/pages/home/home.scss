@@ -1,16 +1,21 @@
 .home {
    z-index: 1;
+
+   .slideHome {
+      padding: 10px;
+   }
 }
 
 // MEDIA QUERIES
 @media only screen and (min-width: 1024px) {
    .home {
-      width: 80%;
+      width: 85%;
       margin: 0 auto;
-      margin-top: 100px;
+      margin-top: 80px;
 
       .slideHome {
          height: 500px;
+         padding: 20px;
       }
    }
 }

@@ -26,13 +26,15 @@ function CarouselBanner() {
 
     return (
         <div className='carouselContainer'>
-            {slides.map((obj, index) => {
-                return (
-                    <div key={index} className={slideIndex === index + 1 ? 'slide activeAnimate' : 'slide'}>
-                        <img src={obj.url} alt={obj.title}/>
-                    </div>
-                )
-            })}
+            <div className='containerCarousel'>
+                {slides.map((obj, index) => {
+                    return (
+                        <div key={index} className={slideIndex === index + 1 ? 'slide activeAnimate' : 'slide'}>
+                            <img src={obj.url} alt={obj.title}/>
+                        </div>
+                    )
+                })}
+            </div>
 
             <div className='containerText'>
                 <h1>Control and manage any device with cloud solutions</h1>

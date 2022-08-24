@@ -10,9 +10,9 @@
         display: flex;
         flex-direction: column;
         align-items: center; 
-        justify-content: space-between;
+        justify-content: space-evenly;
         background-color: $color-white;
-        height: 100%;
+        height: 500px;
 
         img {
             width: 80%;

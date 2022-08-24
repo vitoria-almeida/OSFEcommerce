@@ -12,7 +12,7 @@ function ErrorMessage() {
                     <Link to='/'><li>Home</li></Link> /
                     <li>404</li>
                 </ul>
-
+                
                 <div className='errorBorder'></div>
                 <h1>404</h1>
 
