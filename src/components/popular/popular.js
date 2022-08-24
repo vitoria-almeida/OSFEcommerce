@@ -7,6 +7,8 @@ import { BsArrowClockwise } from 'react-icons/bs'
 import { popularItensData } from '../../services/popularItensData.js'
 
 import line from '../../assets/line.png'
+import plus from '../../assets/plus.png'
+import heart from '../../assets/heart.png' 
 
 function PopularItens() {
     const [slideIndex, setSlideIndex] = useState(1)
@@ -17,7 +19,7 @@ function PopularItens() {
 
     const [next, setNext] = useState(8);
     const slice = popularItensData.slice(0, next)
-    const loadMore= () => {
+    const loadMore = () => {
         setNext(next + 4)
     }
     
@@ -28,18 +30,26 @@ function PopularItens() {
                 <h1>Popular Itens</h1>
                 <img src={line} alt='White Line' className='line'/>
             </div>
-            
+
             <div className='popularCards'>
                 {slice.map((data, index) => (
                     <div className={`card ${slideIndex === index + 1 ? 'slide activeAnimate' : 'slide'}`} key={data.id}>
                         <div className='cardImage'>
-                                <img src={data.path} alt=''/>               
+                            <img src={data.path} alt=''/> 
+                            <div className='overlay'>
+                                <div>
+                                    <img src={plus} alt='Plus Icon'/>
+                                </div>
+                                <div>
+                                    <img src={heart} alt='Heart Icon'/>
+                                </div>
                             </div>
+                        </div>
 
-                            <div className='cardText'>
-                                <h3>{data.name}</h3>
-                                <h4>$ {data.price}</h4>
-                            </div> 
+                        <div className='cardText'>
+                            <h3>{data.name}</h3>
+                            <h4>$ {data.price}</h4>
+                        </div> 
                     </div>
                 ))}
             </div>

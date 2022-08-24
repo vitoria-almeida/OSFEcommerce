@@ -60,6 +60,42 @@
                     height: 100%;
                     border-radius: 10px 10px 0 0;
                 }
+
+                .overlay {
+                    background-image: linear-gradient(to top, rgba(28, 193, 103, 0.8), rgba(46, 211, 162, 0.8));
+                    opacity: 0.6;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    border-radius: 10px;
+                    transition: 1s;
+
+                    div {
+                        padding: 25px;
+                        background-color: $color-white;
+                        border-radius: 50%;
+                        margin: 0 10px;
+                        cursor: pointer;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 35px;
+                        }
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }          
             }
 
             .cardText {
