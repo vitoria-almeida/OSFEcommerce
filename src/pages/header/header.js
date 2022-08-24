@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { productCategories } from '../../services/productsData.js'
 import {sales} from '../../services/salesData'
 
+import Profile from '../../components/profile/profile'
+
 import './header.scss'
 import './dropdown.scss'
 
@@ -25,6 +27,8 @@ function Header() {
     const [arrow, setArrow] = useState(true)
     const [arrowProducts, setArrowProducts] = useState(false)
     const [arrowSales, setArrowSales] = useState(false)
+
+    const [isModalVisible, setIsModalVisible] = useState(false)
 
     return (
         <div className='headerContainer'>
@@ -84,7 +88,12 @@ function Header() {
                 <div className='nav-icons'>
                     <ul className='nav-ul-icons'>
                         <li><img src={searchIcon} alt="Search Icon"/></li>
-                        <li><img src={profileIcon} alt="Profile Icon"/></li>
+                        <li>
+                            <button className='profileButton' onClick={() => setIsModalVisible(true)}>
+                                <img src={profileIcon} alt="Profile Icon"/>
+                            </button>
+                            {isModalVisible ? <Profile onClose={() => setIsModalVisible(false)}/> : null}
+                        </li>
                         <li><img src={wishlistIcon} alt="Heart Icon"/></li>
                         <li><img src={cartIcon} alt="Cart Icon"/></li>
                     </ul>

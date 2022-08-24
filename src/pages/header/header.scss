@@ -71,6 +71,12 @@ header {
 
             li {
                 list-style: none;
+               
+                .profileButton {
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                }              
             }
         }
     } 
@@ -177,6 +183,8 @@ header {
                 .nav-ul-icons {
                     justify-content: space-between;
                 }
+
+               
             }
         } 
     }
