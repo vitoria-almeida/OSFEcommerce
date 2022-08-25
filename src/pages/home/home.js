@@ -14,7 +14,7 @@ function Home() {
     const [isModalVisible, setIsModalVisible] = useState(false)
 
     useEffect(() => {
-        const timer = setTimeout(() => setIsModalVisible(true), 1000);
+        const timer = setTimeout(() => setIsModalVisible(true), 5000);
         return () => clearTimeout(timer);
     }, []);
 
