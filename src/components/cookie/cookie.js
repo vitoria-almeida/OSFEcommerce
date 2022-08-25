@@ -3,8 +3,6 @@ import './cookie.scss';
 import { CgClose } from 'react-icons/cg'
 import { Link } from 'react-router-dom'
 
-import Button from '../button/button'
-
 function Cookie({ onClose = () => {} }) {   
     return (
         <div className='cookieContainer'>
