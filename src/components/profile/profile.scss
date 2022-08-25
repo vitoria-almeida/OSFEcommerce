@@ -8,7 +8,7 @@
 }
 
 .profileContainer {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
@@ -70,22 +70,52 @@
                 left: 90%;
                 bottom: 18%;
                 cursor: pointer;
-            }  
+            }
+            
+            button {
+                background-color: $color-green;
+                color: $color-white;
+                border: none;
+                width: 180px;
+                padding: 12px;
+                border-radius: 20px;
+                cursor: pointer; 
+                margin: 0 auto;  
+            }
         }
-
-        button {
-            background-color: $color-green;
-            color: $color-white;
-            border: none;
-            padding: 12px 70px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
+           
         a {
-           @include link;
-           text-align: center; 
+            @include link;
+            text-align: center; 
+         }
+    } 
+}
+
+// MEDIA QUERIES
+@media only screen and (max-width: 580px) {
+   .profileContainer {
+        .profileContent {
+            width: 300px;
+            height: 400px;
+
+            form {
+                .icon {
+                    left: 80%;
+                    bottom: 22%;
+                }
+            }
+        }
+        
+        a {
+            margin-top: 30px;
         }
     }
-    
 }
+
+@media only screen and (max-width: 360px) {
+    .profileContainer {
+        .profileContent {
+            width: 270px;
+        }
+    }
+ }

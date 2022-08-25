@@ -30,8 +30,9 @@ function Profile({ id='modal', onClose = () => {} }) {
                     <div className='icon'>
                         <IoEyeOutline size={20} color={'rgba(54, 51, 50, 0.4)'}/>                     
                     </div>
-                </form>
-                <button type='submit'>LOGIN</button>
+
+                    <button type='submit'>LOGIN</button>             
+                </form>             
                 <Link to='/' target='_blank'>I don't have an account</Link>
             </div>
         </div>
