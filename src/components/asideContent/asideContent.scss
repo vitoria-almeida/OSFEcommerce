@@ -26,6 +26,10 @@
            max-width: 200px;
            color: $color-gray;
         }
+        
+        a {
+            text-decoration: none;
+        }
 
         button {
             width: 150px;
@@ -34,6 +38,8 @@
             color: $color-light-blue;
             padding: 8px; 
             background-color: transparent; 
+            cursor: pointer;
+            
 
             display: flex;
             align-items: center;

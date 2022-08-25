@@ -61,7 +61,7 @@ function PopularItens() {
                 ))}
             </div>
 
-            <button class='loadButton' onClick={() => loadMore()}>
+            <button className='loadButton' onClick={() => loadMore()}>
                 LOAD MORE <BsArrowClockwise className='arrow' size={20}/>
             </button>
         </div>
