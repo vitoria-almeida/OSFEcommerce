@@ -50,8 +50,7 @@ function Footer() {
                     <li>Delivery</li>
                     <li>Testimonials</li>
                     <li>Contact</li>
-                </ul>
-                
+                </ul>            
             </div>
 
             <div>

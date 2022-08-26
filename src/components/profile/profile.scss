@@ -7,6 +7,16 @@
     text-decoration: none;
 }
 
+@mixin input {
+    border-radius: 20px;
+    border: 3px solid $color-gray-opacity-3;
+    outline-color: $color-gray-opacity-3;
+    padding: 10px;
+    color: $color-gray;
+    font-weight: 600;
+    width: 80%;
+}
+
 .profileContainer {
     position: fixed;
     left: 0;
@@ -26,7 +36,7 @@
         justify-content: space-evenly;
         background-color: $color-white;
         width: 500px;
-        height: 470px;
+        height: 500px;
         border-radius: 8px;
         color: $color-gray;
         padding: 15px;
@@ -36,53 +46,63 @@
         }
 
         form {
+            width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            width: 80%;
-            height: 40%;
-            line-height: 2.5;
-
-            input {
-                border-radius: 20px;
-                border: 3px solid $color-gray-opacity-3;
-                outline-color: $color-gray-opacity-3;
-                padding: 10px;
-                color: $color-gray;
-                font-weight: 600;
-            }
+            align-items: center;
 
             label {
-                font-weight: 600;      
+                font-weight: 600; 
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0;
             }
 
             :nth-child(2) {
                 margin-bottom: 10px;
             } 
             
-            :nth-child(3) {
+            div {
+                width: 110%;
                 display: flex;
-                justify-content: space-between;
-            }           
+                justify-content: center;
+
+                input {
+                    @include input;                
+                }
+           
+                .icon {
+                    position: relative;
+                    width: 10%;
+                    right: 10%;
+                    top: 10%;
+                    cursor: pointer;
+                }
+            } 
             
-            .icon {
-                position: relative;
-                left: 90%;
-                bottom: 18%;
-                cursor: pointer;
+            .passDiv {
+                margin-left: 50px;
+                
+            }
+
+            p {
+                color: rgb(245, 55, 55);
+                width: 80%;
+                font-size: 13px;
             }
             
             button {
                 @include button;
                 width: 180px;
-                padding: 12px;
-                margin: 0 auto;  
+                padding: 12px; 
+                margin-top: 40px;
             }
         }
            
         a {
             @include link;
-            text-align: center; 
+            text-align: center;           
          }
     } 
 }
@@ -95,15 +115,13 @@
             height: 400px;
 
             form {
-                .icon {
-                    left: 80%;
-                    bottom: 22%;
+                div {
+                    .icon {
+                        width: 40px;
+                        right: 15%;
+                    }
                 }
             }
-        }
-        
-        a {
-            margin-top: 30px;
         }
     }
 }
