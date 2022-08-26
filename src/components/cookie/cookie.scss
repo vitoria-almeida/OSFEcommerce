@@ -33,8 +33,7 @@
             line-height: 1.5;
 
             a {
-                text-decoration: none;
-                color: $color-green;
+                @include a;
             }
         }
 
@@ -43,12 +42,8 @@
             justify-content: flex-end;
 
             button {
-                border: none;
-                background-color: $color-green;
-                color: $color-white;
-                padding: 10px 50px;
-                border-radius: 20px;
-                cursor: pointer;
+                @include button;
+                padding: 10px;
             }
         }
     }

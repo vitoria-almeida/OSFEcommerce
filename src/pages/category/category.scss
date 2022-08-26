@@ -1,0 +1,169 @@
+@import '../../style/variables.scss';
+
+@mixin content {
+    width: 100%; 
+    border-radius: 3px;
+}
+
+.categoryContainer {
+    @include container;
+
+    ul {
+        @include ul;
+        width: 200px;
+        
+        a {
+            @include a;
+            &:hover {
+                color: $color-gray;
+            }
+        }
+    }
+
+    h1 {
+        font-weight: 800;
+        margin: 20px 0;
+    }
+
+    .categoryFilters {
+        @include content;
+        background-color: $color-white;
+        
+        form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+
+            label {
+               font-weight: 600;
+            }
+            
+            select {
+                padding: 7px 15px;
+                background-color: transparent;
+                border: 2px solid $color-gray-opacity-2;
+                border-radius: 20px;
+                color: $color-gray-opacity-2;
+                font-weight: 600;
+                font-size: 15px;
+                outline-color: $color-gray-opacity-2;
+                width: 180px;
+
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                background-image: url('../../assets/darkDownArrow.png');
+                background-repeat: no-repeat, repeat;
+                background-position: right .7em top 50%, 0 0;
+                background-size: .65em auto, 100%;
+            }
+
+            .dots {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .dot {
+                    @include dot;
+                    margin: 0 5px;
+                    background-color: transparent;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    
+    h4 {
+        margin-top: 20px;
+    }
+
+    .categoryCards {
+        height: auto;
+        width: 100%;
+        gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+        .card {
+            @include card;
+
+            .cardImage {
+                @include cardImage;
+
+                img {
+                    @include cardImg;
+                }
+            }
+
+            .cardText {
+                @include cardText;         
+
+                h3 {
+                    @include cardH3;
+                }
+                
+                h4 {
+                    color: $color-gray-opacity-2;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .loadMoreButton {
+        @include button;
+        padding: 10px;
+        margin: 30px 0;
+    }
+}
+
+// MEDIA QUERIES
+@media only screen and (min-width: 768px) {
+    .categoryContainer {
+        .categoryFilters {
+            column-count: 2;
+        }
+    }
+
+    .loadMoreButton {
+        position: relative;
+        top: 30px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .categoryContainer {
+        width: 85%;
+        margin: 0 auto;
+
+        ul {
+            margin-top: 60px;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 0px;
+        }
+
+        .categoryFilters {
+            form {
+                justify-content: space-around;
+            }
+        }
+
+        .categoryCards {
+            justify-content: space-between;
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .categoryContainer {
+        .categoryFilters {
+            column-count: 3;
+        }
+    }
+}

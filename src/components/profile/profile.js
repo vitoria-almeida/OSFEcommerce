@@ -15,7 +15,7 @@ function Profile({ id='modal', onClose = () => {} }) {
         <div id={id} className='profileContainer' onClick={handleOutsideClick}>
             <div className='profileContent'>
                 <h1>Sign in</h1>
-                <form>
+                <form action=''>
                     <label for='email'>
                         Email
                     </label>

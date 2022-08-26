@@ -1,7 +1,5 @@
 import './carouselBanner.scss'
 
-import Button from '../button/button'
-
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -42,7 +40,7 @@ function CarouselBanner() {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.</p>
                 <div className='containerBtn'>
                     <Link to='/category'>
-                        <Button style={{borderColor: 'white', color: 'white', padding: '10px 0'}} text='VIEW MORE'/>
+                        <button>VIEW MORE</button>
                     </Link>
                 </div>
             </div>

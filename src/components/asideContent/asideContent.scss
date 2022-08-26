@@ -32,17 +32,11 @@
         }
 
         button {
-            width: 150px;
-            border-radius: 20px;
+            @include button;
             border: 3px solid $color-light-blue;
             color: $color-light-blue;
             padding: 8px; 
-            background-color: transparent; 
-            cursor: pointer;
-            
-
-            display: flex;
-            align-items: center;
+            background-color: transparent;            
             justify-content: space-evenly;
         }       
     }

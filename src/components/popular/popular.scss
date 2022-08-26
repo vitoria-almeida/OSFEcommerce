@@ -46,19 +46,14 @@
         }  
 
         .card {
-            background: $color-white;
-            width: 280px;
-            border-radius: 10px;
+            @include card;
             margin-bottom: 30px;
 
             .cardImage {
-                height: 250px;
-                border-radius: 10px 10px 0 0;
+                @include cardImage;
                   
                 img {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 10px 10px 0 0;
+                    @include cardImg;
                 }
 
                 .overlay {
@@ -99,19 +94,10 @@
             }
 
             .cardText {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-                background-color: $color-white;
-                height: 100px;
-                border-radius: 0 0 10px 10px;
+                @include cardText;
     
                 h3 {
-                    color: $color-gray;
-                    font-size: 15px;
-                    text-align: center;
-                    width: 70%;
+                    @include cardH3;
                 }
     
                 h4 {
@@ -129,23 +115,12 @@
         overflow-x: hidden;
 
         .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: 3px solid $color-dots;
-            margin: 0 10px;
-            background-color: $color-dots;
+            @include dot;
             flex: none;
         }
 
         .dotActive {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: 3px solid #f1f1f1;
-            margin: 0 10px;
-            background-color: $color-gray-opacity-2;
-            transition: 1.2s;
+            @include dotActive;
             flex: none;
         }
     }  
@@ -200,17 +175,11 @@
         }
 
         .loadButton {
+            @include button;
             width: 250px;
-            border-radius: 20px;
-            border-color: $color-white;
-            padding: 5px; 
+            border: 1px solid $color-white;
             background-color: transparent;  
-            color: $color-white; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
             gap: 15px;
-            cursor: pointer;
            
             .arrow {
                 transform: rotate(280deg);
