@@ -19,8 +19,12 @@ function FeaturedProducts() {
     
     const handleRightClick = (e) => {
         e.preventDefault()
-        carousel.current.scrollLeft += carousel.current.offsetWidth
+        carousel.current.scrollLeft += carousel.current.offsetLeft
     }
+
+    setInterval(()=>{
+        carousel.current.scrollLeft += carousel.current.offsetLeft    
+    }, 5000)
 
     return (
         <div className='featuredContainer'>
