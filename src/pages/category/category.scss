@@ -118,6 +118,10 @@
         padding: 10px;
         margin: 30px 0;
     }
+
+    .featuredProductsCategory {
+        display: none;
+    }
 }
 
 // MEDIA QUERIES
@@ -131,6 +135,10 @@
     .loadMoreButton {
         position: relative;
         top: 30px;
+    }
+
+    .featuredContainerCategory {
+        display: none;
     }
 }
 
@@ -156,6 +164,64 @@
 
         .categoryCards {
             justify-content: space-between;
+        }
+
+        .featuredContainerCategory {
+            @include featuredContainer;
+            width: 113%;
+            height: 100%;
+            position: relative; 
+            top: 50px;
+            
+            h1 {
+               @include featuredH1; 
+            }
+
+            .featuredIcons {
+                @include featuredIcons;
+
+                button {
+                    @include featuredButton;
+                }
+
+                .line {
+                    @include featuredLine;
+                }
+            }
+
+            .featuredCards {
+                @include featuredCards;
+
+                .card {
+                    @include card;
+                    width: 260px;
+                    flex: none;
+
+                    .cardImage {
+                        @include cardImage;
+                        height: 180px;
+                      
+                        img {
+                            @include cardImg;
+                        }
+                    }
+
+                    .cardText {
+                        @include cardText;
+                        height: 120px;
+                        justify-content: space-between;
+                        padding: 10px 0;
+
+                        h3 {
+                            @include cardH3;
+                        }
+            
+                        h4 {
+                            color: $color-green;
+                        }
+                    }
+                }  
+            }  
         }
     }
 }

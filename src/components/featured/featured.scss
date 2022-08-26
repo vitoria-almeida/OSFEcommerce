@@ -1,47 +1,26 @@
 @import '../../style/variables.scss';
 
 .featuredContainer {
-    background-color: $color-blue;
-    color: $color-white;
-    height: 550px;
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   @include featuredContainer;
 
     h1 {
-        font-size: 40px;
-        line-height: 2;
+        @include featuredH1;
     }
 
     .featuredIcons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        padding: 30px;
+        @include featuredIcons;
 
         button {
-            border: none;
-            height: 30px;
-            background-color: transparent;
-            cursor: pointer;
+            @include featuredButton;
         }
 
         .line {
-            width: 250px;
-            height: 2px;
+           @include featuredLine
         }
     }
 
     .featuredCards {
-        display: flex;
-        gap: 20px;
-        width: 100%;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        scroll-behavior: smooth; 
+        @include featuredCards;
 
         .card {
             @include card;
@@ -70,8 +49,7 @@
                 }
             }
         }  
-    }
-    
+    }  
 }
 
 //MEDIA QUERIES
