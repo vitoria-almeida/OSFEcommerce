@@ -23,7 +23,11 @@ export const popularItensData = [
         "id": 2,
         "name": "Hay - About A Lounge Chair AAL 93",
         "price": 659.55,
-        "path": img2
+        "path": img2,
+        "span": "BUY NOW",
+        "classnameCardImage": "cardImage2",
+        "classnameCardText": "cardText2"
+        
     },
     {
         "id": 3,

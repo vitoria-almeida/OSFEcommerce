@@ -77,7 +77,6 @@
                         border-radius: 50%;
                         margin: 0 10px;
                         cursor: pointer;
-
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -90,7 +89,16 @@
                     &:hover {
                         opacity: 1;
                     }
-                }          
+                    
+                }   
+                
+                .cardImage2 {
+                    background: none;
+
+                    div {
+                        display: none;
+                    }
+                }
             }
 
             .cardText {
@@ -102,6 +110,35 @@
     
                 h4 {
                     color: $color-light-blue;
+                }
+
+                .cardText2 {
+                    display: flex;
+                    border: 2px solid $color-gray-opacity-3;
+                    border-radius: 20px;
+                    padding: 5px 12px;
+                    gap: 15px;
+                    z-index: 1;
+
+                    h4 {
+                        color: $color-green;
+                    }
+
+                    .border {
+                        border-right: 2px solid $color-gray-opacity-3;
+                        height: 160%;
+                        position: relative;
+                        bottom: 6px;
+                    }
+
+                    span {
+                        a {
+                            color: black;
+                            font-weight: 600;
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }  

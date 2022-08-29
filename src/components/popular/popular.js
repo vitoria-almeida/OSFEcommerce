@@ -1,6 +1,7 @@
 import './popular.scss'
 
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import { BsArrowClockwise } from 'react-icons/bs'
 
@@ -36,7 +37,7 @@ function PopularItens() {
                     <div className={`card ${slideIndex === index + 1 ? 'slide activeAnimate' : 'slide'}`} key={data.id}>
                         <div className='cardImage'>
                             <img src={data.path} alt=''/> 
-                            <div className='overlay'>
+                            <div className={`overlay ${data.classnameCardImage}`}>
                                 <div>
                                     <img src={plus} alt='Plus Icon'/>
                                 </div>
@@ -48,7 +49,11 @@ function PopularItens() {
 
                         <div className='cardText'>
                             <h3>{data.name}</h3>
-                            <h4>$ {data.price}</h4>
+                            <div className={data.classnameCardText}>
+                                <h4>$ {data.price}</h4>
+                                <div className='border'></div>
+                                <span><Link to='/products'>{data.span}</Link></span>
+                            </div>
                         </div> 
                     </div>
                 ))}
