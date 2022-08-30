@@ -40,29 +40,11 @@
             }
             
             select {
-                padding: 7px 15px;
-                background-color: transparent;
-                border: 2px solid $color-gray-opacity-2;
-                border-radius: 20px;
-                color: $color-gray-opacity-2;
-                font-weight: 600;
-                font-size: 15px;
-                outline-color: $color-gray-opacity-2;
-                width: 180px;
-
-                -moz-appearance: none;
-                -webkit-appearance: none;
-                appearance: none;
-                background-image: url('../../assets/darkDownArrow.png');
-                background-repeat: no-repeat, repeat;
-                background-position: right .7em top 50%, 0 0;
-                background-size: .65em auto, 100%;
+                @include select;
             }
 
             .dots {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include dots;
 
                 .dot {
                     @include dot;

@@ -15,7 +15,7 @@ import img12 from '../assets/posts-4.jpg'
 export const popularItensData = [
     {
     "id": 1,
-    "name": "Kristins Dam Oak Table With White Marble Top",
+    "name": "Kristina Dam Oak Table With White Marble Top",
     "price": 799.55,
     "path": img1
     },

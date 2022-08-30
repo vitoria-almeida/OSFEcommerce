@@ -2,7 +2,6 @@ import './popular.scss'
 
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
 import { BsArrowClockwise } from 'react-icons/bs'
 
 import { popularItensData } from '../../services/popularItensData.js'
@@ -28,7 +27,7 @@ function PopularItens() {
         <div className='popularContainer'>
             <div className='popularText'>
                 <img src={line} alt='White Line' className='line'/>
-                <h1>Popular Itens</h1>
+                <h1>Popular Items</h1>
                 <img src={line} alt='White Line' className='line'/>
             </div>
 

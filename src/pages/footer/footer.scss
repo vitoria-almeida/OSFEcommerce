@@ -50,15 +50,12 @@ footer {
         }
 
         ul.socialIcons {
+            @include ulIcons;
             margin-top: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            list-style: none;
             margin-bottom: 60px;
             
             li {
-                margin: 0 10px;
+                @include liIcons;
             }
         }
     }

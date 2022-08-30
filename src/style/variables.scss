@@ -47,11 +47,17 @@ $color-light-blue: #3A5A95;
     cursor: pointer;
 }
 
+@mixin dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @mixin dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    border: 3px solid $color-dots;
+    border: 2px solid $color-dots;
     margin: 0 10px;
     background-color: $color-dots;
 }
@@ -142,4 +148,42 @@ $color-light-blue: #3A5A95;
     overflow-x: hidden;
     overflow-y: hidden;
     scroll-behavior: smooth; 
+}
+
+@mixin border {
+    width: 100%;
+    border-bottom: 1px solid $color-gray-opacity;
+    position: relative;
+    z-index: 0;
+}
+
+@mixin select {
+    padding: 7px 15px;
+    background-color: transparent;
+    border: 2px solid $color-gray-opacity-2;
+    border-radius: 20px;
+    color: $color-gray-opacity-2;
+    font-weight: 600;
+    font-size: 15px;
+    outline-color: $color-gray-opacity-2;
+    width: 180px;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('../../assets/darkDownArrow.png');
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+@mixin ulIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+@mixin liIcons {
+    margin: 0 10px;
 }

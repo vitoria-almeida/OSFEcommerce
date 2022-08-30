@@ -29,7 +29,7 @@ function ErrorMessage() {
                         <Link to='/'><h5>Go back to Homepage</h5></Link>
                         
                         <div className='errorInput'>
-                            <label for='search'>Search our site</label><br/>
+                            <label htmlFor='search'>Search our site</label><br/>
                             <input id='search' name='search' placeholder='SEARCH'/>
                             <img src={searchIcon} alt='Search Icon'></img>
                         </div>

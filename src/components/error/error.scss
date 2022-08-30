@@ -12,11 +12,8 @@
     }
 
     .errorBorder {
-        width: 100%;
-        border-bottom: 1px solid $color-gray-opacity;
-        position: relative;
+        @include border;
         top: 50px;
-        z-index: 0;
     }
 
     h1 {

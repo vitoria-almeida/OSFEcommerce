@@ -70,6 +70,7 @@
                     opacity: 0;
                     border-radius: 10px;
                     transition: 1s;
+                    z-index: 1;
 
                     div {
                         padding: 25px;
@@ -154,10 +155,12 @@
         .dot {
             @include dot;
             flex: none;
+            border-color: $color-blue;
         }
 
         .dotActive {
             @include dotActive;
+            background-color: $color-blue;
             flex: none;
         }
     }  
