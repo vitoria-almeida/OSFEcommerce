@@ -76,7 +76,19 @@ header {
                     border: none;
                     background-color: transparent;
                     cursor: pointer;
-                }              
+                }  
+                
+                span {
+                    border: 3px solid $color-green;
+                    border-radius: 100%;
+                    color: $color-green;
+                    font-size: 10px;
+                    font-weight: 800;
+                    padding: 0 3px;
+                    position: relative;
+                    bottom: 18px;
+                    right: 8px;                  
+                }
             }
         }
     } 
@@ -182,9 +194,13 @@ header {
 
                 .nav-ul-icons {
                     justify-content: space-between;
-                }
 
-               
+                    li {
+                        span {
+                            background-color: $color-white;
+                        }
+                    }
+                }        
             }
         } 
     }

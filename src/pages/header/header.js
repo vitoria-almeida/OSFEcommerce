@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { FaBars, FaTimes } from 'react-icons/fa'
 
 import { productCategories } from '../../services/productsData.js'
 import {sales} from '../../services/salesData'
 
 import Profile from '../../components/profile/profile'
+import { CartContext } from '../../contexts/CartContext'
 
 import './header.scss'
 import './dropdown.scss'
@@ -19,8 +21,6 @@ import cartIcon from '../../assets/cartIcon.png'
 import wishlistIcon from '../../assets/wishlistIcon.png'
 import profileIcon from '../../assets/profileIcon.png'
 
-import { FaBars, FaTimes } from 'react-icons/fa'
-
 function Header() {
     const [navState, setNavState] = useState(false)
 
@@ -29,6 +29,10 @@ function Header() {
     const [arrowSales, setArrowSales] = useState(false)
 
     const [isModalVisible, setIsModalVisible] = useState(false)
+
+    const {cart} = useContext(CartContext)
+    const {wishlist} = useContext(CartContext)
+    const {productQuantity} = useContext(CartContext)
 
     return (
         <div className='headerContainer'>
@@ -87,15 +91,23 @@ function Header() {
 
                 <div className='nav-icons'>
                     <ul className='nav-ul-icons'>
-                        <li><img src={searchIcon} alt="Search Icon"/></li>
+                        <li>
+                            <img src={searchIcon} alt="Search Icon"/>
+                        </li>
                         <li>
                             <button className='profileButton' onClick={() => setIsModalVisible(true)}>
                                 <img src={profileIcon} alt="Profile Icon"/>
                             </button>
                             {isModalVisible ? <Profile onClose={() => setIsModalVisible(false)}/> : null}
                         </li>
-                        <li><img src={wishlistIcon} alt="Heart Icon"/></li>
-                        <li><img src={cartIcon} alt="Cart Icon"/></li>
+                        <li>
+                            <img src={wishlistIcon} alt="Heart Icon"/>
+                            <span>{wishlist.length}</span>
+                        </li>
+                        <li>
+                            <img src={cartIcon} alt="Cart Icon"/>
+                            <span>{productQuantity === true ? cart.length : productQuantity}</span>                           
+                        </li>
                     </ul>
                 </div>
             </header>

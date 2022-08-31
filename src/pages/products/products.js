@@ -2,7 +2,7 @@ import './products.scss'
 import 'react-tabs/style/react-tabs.scss';
 
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import { HiPlusSm, HiMinusSm } from 'react-icons/hi'
 import { FaPinterestP, FaFacebookF, FaGooglePlusG, FaTwitter } from 'react-icons/fa'
@@ -11,6 +11,7 @@ import { BsArrowClockwise } from 'react-icons/bs'
 import ReadMore from './readmore'
 
 import { popularItensData } from '../../services/popularItensData.js'
+import { CartContext } from '../../contexts/CartContext'
 
 import cardiganBlack from '../../assets/products/cardigan1.jpg'
 import cardiganBlack2 from '../../assets/products/cardigan3.jpg'
@@ -19,9 +20,6 @@ import cardiganBlue2 from '../../assets/products/cardigan7.jpg'
 import focus from '../../assets/service-focus.png'
 import method from '../../assets/service-method.png'
 import knowledge from '../../assets/service-knowledge.png'
-
-// import plus from '../../assets/plus.png'
-// import heart from '../../assets/heart.png' 
 
 function ProductDetailedPage() {
     const images = [
@@ -42,6 +40,24 @@ function ProductDetailedPage() {
     const slice = popularItensData.slice(0, next)
     const loadMore = () => {
         setNext(next + 4)
+    }
+
+    const [quantity, setQuantity] = useState(1)
+    const {setProductQuantity} = useContext(CartContext)
+    
+    const handleDecrement = () => {
+        if(quantity > 1) {
+            setQuantity(prevCount => prevCount - 1)
+        }
+    }
+    const handleIncrement = () => {
+        if(quantity < 10) {
+            setQuantity(prevCount => prevCount + 1)
+        }
+    }
+
+    const addQuantity = (e) => {
+        setProductQuantity(quantity)   
     }
 
     return (
@@ -86,8 +102,12 @@ function ProductDetailedPage() {
                         </select>
                     </form>   
                     <div className='productDetailedCardButtons'>
-                        <button type='button'><HiMinusSm/>2<HiPlusSm/></button>
-                        <button type='button'>ADD TO CART</button>
+                        <button type='button'>
+                            <HiMinusSm onClick={handleDecrement}/>
+                            {quantity}
+                            <HiPlusSm onClick={handleIncrement}/>
+                        </button>
+                        <button type='button' onClick={addQuantity}>ADD TO CART</button>
                     </div>
 
                     <ReadMore limit={185}>                       

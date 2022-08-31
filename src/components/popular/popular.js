@@ -1,10 +1,11 @@
 import './popular.scss'
 
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { BsArrowClockwise } from 'react-icons/bs'
 
 import { popularItensData } from '../../services/popularItensData.js'
+import { CartContext } from '../../contexts/CartContext'
 
 import line from '../../assets/line.png'
 import plus from '../../assets/plus.png'
@@ -22,6 +23,16 @@ function PopularItens() {
     const loadMore = () => {
         setNext(next + 4)
     }
+
+    const {cart, setCart} = useContext(CartContext)
+    const addToCart = (data) => {
+        setCart([...cart, data])
+    }
+
+    const {wishlist, setWishlist} = useContext(CartContext)
+    const addToWishlist = (data) => {
+        setWishlist([...wishlist, data])
+    }
     
     return (
         <div className='popularContainer'>
@@ -38,10 +49,10 @@ function PopularItens() {
                             <img src={data.path} alt=''/> 
                             <div className={`overlay ${data.classnameCardImage}`}>
                                 <div>
-                                    <img src={plus} alt='Plus Icon'/>
+                                    <img src={plus} alt='Plus Icon' onClick={() => addToCart(data)}/>
                                 </div>
                                 <div>
-                                    <img src={heart} alt='Heart Icon'/>
+                                    <img src={heart} alt='Heart Icon' onClick={() => addToWishlist(data)}/>
                                 </div>
                             </div>
                         </div>
