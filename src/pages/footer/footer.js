@@ -1,14 +1,13 @@
+import './footer.scss'
+
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
-import downArrow from '../../assets/darkDownArrow.png'
-import upArrow from '../../assets/darkUpArrow.png'
+import { FaPinterestP, FaFacebookF, FaGooglePlusG, FaTwitter } from 'react-icons/fa'
 
 import { productCategories } from '../../services/productsData'
 
-import { FaPinterestP, FaFacebookF, FaGooglePlusG, FaTwitter } from 'react-icons/fa'
-
-import './footer.scss'
+import downArrow from '../../assets/darkDownArrow.png'
+import upArrow from '../../assets/darkUpArrow.png'
 
 function Footer() {
     const date = new Date()

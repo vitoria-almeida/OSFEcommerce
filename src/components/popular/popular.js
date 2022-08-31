@@ -13,7 +13,6 @@ import heart from '../../assets/heart.png'
 
 function PopularItens() {
     const [slideIndex, setSlideIndex] = useState(1)
-
     const moveDot = (index) => {
         setSlideIndex(index)
     }

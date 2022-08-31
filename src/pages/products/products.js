@@ -9,7 +9,6 @@ import { FaPinterestP, FaFacebookF, FaGooglePlusG, FaTwitter } from 'react-icons
 import { BsArrowClockwise } from 'react-icons/bs'
 
 import ReadMore from './readmore'
-
 import { popularItensData } from '../../services/popularItensData.js'
 import { CartContext } from '../../contexts/CartContext'
 
@@ -50,6 +49,7 @@ function ProductDetailedPage() {
             setQuantity(prevCount => prevCount - 1)
         }
     }
+    
     const handleIncrement = () => {
         if(quantity < 10) {
             setQuantity(prevCount => prevCount + 1)

@@ -1,9 +1,8 @@
 import './profile.scss'
 
-import { IoEyeOutline, IoEyeOffOutline } from 'react-icons/io5'
-
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { IoEyeOutline, IoEyeOffOutline } from 'react-icons/io5'
 
 function Profile({ id='modal', onClose = () => {} }) {
     const handleOutsideClick = (e) => {
@@ -67,9 +66,7 @@ function Profile({ id='modal', onClose = () => {} }) {
                 <h1>Sign in</h1>
 
                 <form action='#' onSubmit={handleSubmit}>
-                        <label htmlFor='email'>
-                            Email
-                        </label>
+                        <label htmlFor='email'>Email</label>
                         <div>
                             <input 
                                 type='email' 
@@ -83,8 +80,7 @@ function Profile({ id='modal', onClose = () => {} }) {
                         </div> 
                         <p>{formErrors.email}</p>            
          
-                        <label htmlFor='password'>
-                            Password
+                        <label htmlFor='password'>Password
                             <span>
                                 <Link to='/' target='_blank'>forgot password</Link>
                             </span>
@@ -98,6 +94,7 @@ function Profile({ id='modal', onClose = () => {} }) {
                                 value={formValues.password}
                                 onChange={handleChange}
                             />
+                            
                             <div className='icon'>
                                 {!show ? (<IoEyeOutline size={20} color={'rgba(54, 51, 50, 0.4)'} onClick={handleShow}/>)  : (<IoEyeOffOutline size={20} color={'rgba(54, 51, 50, 0.4)'} onClick={handleShow}/>)}
                             </div>

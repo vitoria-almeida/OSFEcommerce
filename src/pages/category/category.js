@@ -22,7 +22,6 @@ function CategoryLandingPage() {
     }
 
     const carousel = useRef(null)
-
     const handleLeftClick = (e) => {
         e.preventDefault()
         carousel.current.scrollLeft -= carousel.current.offsetWidth
@@ -39,6 +38,7 @@ function CategoryLandingPage() {
                 <Link to='/'><li>Home</li></Link> /
                 <li>Category Landing</li>
             </ul>
+            
             <h1>Services</h1>
 
             <div className='categoryFilters' style={{background: background}}>

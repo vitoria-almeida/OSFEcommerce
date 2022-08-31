@@ -24,12 +24,13 @@ function Home() {
                 <div className='carousel'>
                     <CarouselBanner/>
                 </div>
-
+                
                 <div className='asideContent'>
                     <AsideContent/>
                 </div>
                 {isModalVisible ? <Cookie onClose={() => setIsModalVisible(false)}/> : null} 
-            </div>        
+            </div> 
+
             <PopularItens/>       
             <Banner/>                    
             <Benefits/>        

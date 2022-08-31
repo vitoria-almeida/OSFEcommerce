@@ -1,15 +1,14 @@
+import './header.scss'
+import './dropdown.scss'
+
 import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 import { productCategories } from '../../services/productsData.js'
 import {sales} from '../../services/salesData'
-
-import Profile from '../../components/profile/profile'
 import { CartContext } from '../../contexts/CartContext'
-
-import './header.scss'
-import './dropdown.scss'
+import Profile from '../../components/profile/profile'
 
 import logo from '../../assets/logo.png'
 import osfLogo from '../../assets/osfLogo.png'
@@ -38,7 +37,11 @@ function Header() {
         <div className='headerContainer'>
             <header>
                 <div>
-                    <div className='toggle'>{navState ? (<FaTimes size={22} onClick={() => setNavState(false)}/> ) : (<FaBars size={22} onClick={() => setNavState(true)}/>)}</div>            
+                    <div 
+                        className='toggle'>{navState ? (<FaTimes size={22} 
+                        onClick={() => setNavState(false)}/> ) : (<FaBars size={22} 
+                        onClick={() => setNavState(true)}/>)}
+                    </div>            
                     
                     <Link to='/'>
                         <picture>
@@ -78,8 +81,7 @@ function Header() {
                                 <div className={`dropdown-image ${arrow ? 'dropdown-image-off' : ''}`}>
                                     <img src={navGirl} alt='Nav Girl'/>
                                 </div>
-                            </ul>
-                        
+                            </ul>                    
                         </li>
                         <li className='nav-li'>COMPANY <img src={downArrow} alt="Down Arrow"></img></li>
                         <li className='nav-li'>LIBRARY <img src={downArrow} alt="Down Arrow"></img></li>
