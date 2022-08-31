@@ -113,11 +113,11 @@ function Header() {
                         </li>
                         <li>
                             <img src={wishlistIcon} alt="Heart Icon"/>
-                            <span>{wishlist.length}</span>
+                            <span className='wishQntt'>{wishlist.length}</span>
                         </li>
                         <li>
                             <img src={cartIcon} alt="Cart Icon"/>
-                            <span>{productQuantity === true ? cart.length : productQuantity}</span>                           
+                            <span className='cartQntt'>{productQuantity === true ? cart.length : productQuantity}</span>                           
                         </li>
                     </ul>
                 </div>

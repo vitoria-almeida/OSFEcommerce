@@ -135,26 +135,26 @@ function ProductDetailedPage() {
 
                 <TabPanel className='tabPanel'>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.123</p>
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.123</p>
                     </div>            
                 </TabPanel>
                 <TabPanel className='tabPanel'>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.456</p>
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.456</p>
                     </div>            
                 </TabPanel>
                 <TabPanel className='tabPanel'>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.789</p>
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis in dui at interdum. Nunc tempor ac libero quis congue. <br/>Vestibulum ut nulla at nulla mollis placerat et et dolor. Cras mi augue, suscipit eget tortor sed.789</p>
                     </div>            
                 </TabPanel>
             </Tabs>

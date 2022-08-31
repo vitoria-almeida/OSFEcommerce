@@ -78,7 +78,8 @@ header {
                     cursor: pointer;
                 }  
                 
-                span {
+                .cartQntt,
+                .wishQntt {
                     border: 3px solid $color-green;
                     border-radius: 100%;
                     color: $color-green;
