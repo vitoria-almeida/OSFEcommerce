@@ -33,6 +33,13 @@ function Header() {
     const {wishlist} = useContext(CartContext)
     const {productQuantity} = useContext(CartContext)
 
+    function refreshPage() {
+        setTimeout(()=>{
+            window.location.reload(false);
+        }, 500);
+        console.log('page to reload')
+    }
+
     return (
         <div className='headerContainer'>
             <header>
@@ -43,7 +50,7 @@ function Header() {
                         onClick={() => setNavState(true)}/>)}
                     </div>            
                     
-                    <Link to='/'>
+                    <Link to='/' onClick={refreshPage}>
                         <picture>
                             <source srcSet={osfLogo} media='(min-width: 1024px)'/>
                             <img src={logo} alt='OSF Logotype' className='osfLogo'/>
@@ -61,7 +68,9 @@ function Header() {
                                     <li className={`${arrowProducts ? 'dropdown-products-off' : 'dropdown-on'}`}>
                                         <ul>
                                             {productCategories.map((productsData, i) => (
-                                                <Link to='/error' key={i}><li>{productsData}</li></Link>
+                                                <Link to='/error' key={i} onClick={refreshPage}>
+                                                    <li>{productsData}</li>
+                                                </Link>
                                             ))}
                                         </ul>
                                     </li>
@@ -72,7 +81,7 @@ function Header() {
                                     <li className={`${arrowSales ? 'dropdown-sales-off' : 'dropdown-on'}`}>
                                         <ul>
                                             {sales.map((sales, i) => (
-                                                <Link to='/error' key={i}><li>{sales}</li></Link>
+                                                <Link to='/error' key={i} onClick={refreshPage}><li>{sales}</li></Link>
                                             ))}    
                                         </ul>
                                     </li>
