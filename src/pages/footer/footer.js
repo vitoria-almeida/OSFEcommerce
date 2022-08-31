@@ -17,6 +17,13 @@ function Footer() {
     const [arrowCategoriest, setArrowCategoriest] = useState(true)
     const [arrowAbout, setArrowAbout] = useState(true)
 
+    function refreshPage() {
+        setTimeout(()=>{
+            window.location.reload(false);
+        }, 500);
+        console.log('page to reload')
+    }
+
     return (
         <footer>
             <div>
@@ -36,7 +43,7 @@ function Footer() {
 
                 <ul className={`${arrowCategoriest ? 'dropdown-categoriest-off' : 'dropdown-categoriest-on'}`}>
                     {productCategories.map((categoriestData, i) => (
-                        <li key={i}><Link to='/error'>{categoriestData}</Link></li>
+                        <li key={i}><Link to='/error' onClick={refreshPage}>{categoriestData}</Link></li>
                     ))}
                 </ul>
             </div>
