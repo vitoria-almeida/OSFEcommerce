@@ -1,6 +1,6 @@
 import './home.scss'
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import CarouselBanner from '../../components/carouselBanner/carouselBanner'
 import AsideContent from '../../components/asideContent/asideContent'
@@ -14,9 +14,9 @@ function Home() {
     const [isModalVisible, setIsModalVisible] = useState(false)
 
     useEffect(() => {
-        const timer = setTimeout(() => setIsModalVisible(true), 5000);
-        return () => clearTimeout(timer);
-    }, []);
+        const timer = setTimeout(() => setIsModalVisible(true), 5000)
+        return () => clearTimeout(timer)
+    }, []); 
 
     return (
         <div className='home'>

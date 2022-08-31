@@ -42,11 +42,14 @@
                         cursor: pointer;
                         width: 100%;
 
+                        &:hover {
+                            color: $color-green;
+                        }
+
                         li {
                             list-style: none;
                             line-height: 1.8;
-                            font-size: 15px;
-                            
+                            font-size: 15px;                          
                         }
                     }   
                 }
